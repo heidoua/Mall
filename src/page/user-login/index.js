@@ -22,7 +22,7 @@ var formError = {
         $('.error-item').show().find('.error-msg').text(errMsg);
     },
     hidde: function(){
-        $('.error-item').hidde().find('.error-msg').text('');
+        $('.error-item').hide().find('.error-msg').text('');
     }     
 };
 
