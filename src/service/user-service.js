@@ -33,6 +33,24 @@ var _user = {
             success: resolve,
             error: reject
         }); 
+    },
+    // 检查登录状态
+    checkLogin: function(resolve, reject){
+        tool.request({
+            url     : tool.getServerUrl('/user/get_user_info.do'),
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    // 退出登录
+    logout : function(resolve, reject){
+        tool.request({
+            url     : tool.getServerUrl('/user/logout.do'),
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
     }
 };
 
