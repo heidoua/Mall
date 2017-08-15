@@ -27,7 +27,7 @@ var _user = {
     // 用户注册
     register: function(userInfo, resolve, reject){
         tool.request({
-            url: tool.getServerUrl('/user/register .do'),
+            url: tool.getServerUrl('/user/register.do'),
             data: userInfo, 
             method: 'POST',
             success: resolve,

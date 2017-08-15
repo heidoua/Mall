@@ -122,13 +122,13 @@ var page = {
         }
 
         // 验证密码提示问题
-        if (!tool.validate(formData.question, 'question')){
+        if (!tool.validate(formData.question, 'require')){
             result.msg = '密码提示问题不能为空'; 
             return result;
         }
 
         // 验证密码答案 
-        if (!tool.validate(formData.answer, 'answer')){
+        if (!tool.validate(formData.answer, 'require')){
             result.msg = '密码提示问题的答案不能为空'; 
             return result;
         }
@@ -136,6 +136,7 @@ var page = {
         //通过验证，返回正确提示
          result.status = true;
          result.msg = '验证成功';
+         
          return result;
     }
 }; 
