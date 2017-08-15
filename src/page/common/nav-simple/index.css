@@ -1,0 +1,18 @@
+/*
+ * @Author: FangFeiyue 
+ * @Date: 2017-08-11 14:30:33 
+ * @Last Modified by: FangFeiyue
+ * @Last Modified time: 2017-08-11 14:37:11
+ */
+.nav-simple{
+    height: 60px;
+    line-height: 60px;
+    border-bottom:  1px solid #ddd;
+    background-color: #fff; 
+}
+
+.nav-simple .logo{
+    font-size: 26px;
+    font-weight: bold;
+    color: #c60023;
+}

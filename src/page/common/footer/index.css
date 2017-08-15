@@ -1,0 +1,25 @@
+/*
+ * @Author: FangFeiyue 
+ * @Date: 2017-08-11 16:03:25 
+ * @Last Modified by: FangFeiyue
+ * @Last Modified time: 2017-08-11 16:04:58
+ */
+.footer{
+    padding-bottom: 10px;
+}
+
+.footer .links{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
+
+.footer .links .link{
+    padding: 0 10px;
+}
+
+.footer .copyright{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}

@@ -1,0 +1,100 @@
+/*
+ * @Author: FangFeiyue 
+ * @Date: 2017-08-15 13:52:41 
+ * @Last Modified by: FangFeiyue
+ * @Last Modified time: 2017-08-15 15:25:55
+ */
+
+ /* 最外层容器 */
+.page-wrap{
+    padding: 40px 0;
+    background-color: #e72955;
+}
+
+/* 用户表单框 */
+.user-con{
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+    background: #fff;
+}
+
+.user-con .user-title{
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+}
+
+.user-con .user-box{
+     padding: 20px ;
+}
+
+/* 错误提示 */
+.user-con .user-box  .error-item{
+     position: relative;
+     padding: 4px 0 4px 40px;
+     margin-bottom: 10px;
+     border: 1px solid red;
+     color: red; 
+     background: #fde9e9;
+     display: none;
+}
+
+/* 错误提示图标  */
+.user-con .user-box  .error-icon{
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    font-size: 14px;
+    margin-top: -7px;
+}
+
+.user-con .user-item{
+    position: relative;
+    margin-bottom: 20px; 
+}
+
+.user-con .user-item .user-label{
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    bottom: 1px;
+    width: 40px;
+    line-height: 36px;
+    background-color: #f3f3f3;
+    font-size:  18px;
+    color: #d3d3d3;
+    text-align: center;
+    border-right: 1px solid #bdbdbd;
+}
+
+.user-con .user-item .user-content{
+     padding: 10px 0 10px 50px;
+     width: 308px;
+     height: 18px;
+     line-height: 18px;
+     font-size: 15px;
+     outline: none;
+     border: 1px  solid #bdbdbd; 
+}
+
+.user-con .btn-submit{
+    width: 100%;
+    text-align: center;
+    padding: 2px 0;
+    font-size: 20px;
+}
+
+/* 跳转链接 */
+.user-con .link-item{
+     text-align: right;
+     margin-top: 10px;
+}
+
+.user-con .link-item .link{
+     margin-left: 10px;
+     color: #999; 
+}

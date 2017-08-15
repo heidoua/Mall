@@ -1,0 +1,31 @@
+/*
+ * @Author: FangFeiyue 
+ * @Date: 2017-08-14 14:45:10 
+ * @Last Modified by: FangFeiyue
+ * @Last Modified time: 2017-08-14 17:08:30
+ */
+ /* 导航主体 */
+ .nav-side{
+     float: left;
+     width: 130px;
+     min-height: 100px; 
+ }
+
+ .nav-side .nav-item{
+     line-height: 25px;
+     font-size: 13px;
+ }
+
+ .nav-side .nav-item .link{
+     color: #888;
+ }
+
+ .nav-side .nav-item.active .link{
+    color: #c60023;
+ }
+
+ /* 右侧内容区 */
+ .content.width-nav{
+     float: left;
+     width: 950px; 
+ }
