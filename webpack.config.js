@@ -2,7 +2,7 @@
  * @Author: FangFeiyue 
  * @Date: 2017-08-10 17:39:51 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-08-15 15:43:13
+ * @Last Modified time: 2017-08-16 09:04:28
  */
 /*对脚本的处理
 1.js用什么loader加载
@@ -43,6 +43,7 @@ var config = {
         'index': ['./src/page/index/index.js'],
         'user-login': ['./src/page/user-login/index.js'],
         'user-register': ['./src/page/user-register/index.js'],
+        'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
         'result': ['./src/page/result/index.js']
     },
     output: {
@@ -88,7 +89,8 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
-        new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册'))
+        new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码'))
     ]
 };
 
