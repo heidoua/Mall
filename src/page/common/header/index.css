@@ -2,7 +2,7 @@
  * @Author: FangFeiyue 
  * @Date: 2017-08-11 16:28:06 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-08-11 16:40:59
+ * @Last Modified time: 2017-08-16 18:02:31
  */
  .header .logo{
     position: absolute;
@@ -34,4 +34,15 @@
     position: absolute;
     height: 44px;
     width: 80px; 
+}
+
+/* 面包屑导航 */
+.crumb{
+    height: 50px;
+    line-height: 50px;
+    background-color: #eee;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border-top: 2px solid #c60023;
 }

@@ -2,7 +2,7 @@
  * @Author: FangFeiyue 
  * @Date: 2017-08-11 14:30:33 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-08-11 14:37:11
+ * @Last Modified time: 2017-08-16 18:08:05
  */
 .nav-simple{
     height: 60px;
@@ -15,4 +15,5 @@
     font-size: 26px;
     font-weight: bold;
     color: #c60023;
+    text-decoration: none;
 }
