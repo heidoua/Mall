@@ -51,6 +51,39 @@ var _user = {
             success : resolve,
             error   : reject
         });
+    },
+    // 获取用户密码提示问题
+    getQuestion: function(userName, resolve, reject){
+        tool.request({
+            url: tool.getServerUrl('/user/forget_get_question.do'),
+            data: {
+                username: userName
+            }, 
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });     
+    },
+    // 检查密码提示问题答案
+    checkAnwser: function(userInfo, resolve, reject){
+        tool.request({
+            url: tool.getServerUrl('/user/forget_check_answer.do'),
+            data: userInfo, 
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });  
+    },
+    // 重置密码
+    resetPassword: function(userInfo, resolve, reject){
+        console.log('userInfo===>>', userInfo);
+        tool.request({
+            url: tool.getServerUrl('/user/forget_reset_password.do'),
+            data: userInfo, 
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });  
     }
 };
 
