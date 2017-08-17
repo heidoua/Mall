@@ -2,7 +2,7 @@
  * @Author: FangFeiyue 
  * @Date: 2017-08-14 14:44:16 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-08-14 17:03:22
+ * @Last Modified time: 2017-08-17 09:22:37
  */
  require('./index.css');
  var tool = require('util/tool.js');
@@ -37,9 +37,9 @@
              navList: this.option.navList
          });
          //把html放入容器
-         $('.nav-side ').html(navHtml);
+         $('.nav-side').html(navHtml);
      } 
  };
 
- module.exports = navSide ;
+ module.exports = navSide;
   

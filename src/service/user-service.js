@@ -76,7 +76,25 @@ var _user = {
     },
     // 重置密码
     resetPassword: function(userInfo, resolve, reject){
-        console.log('userInfo===>>', userInfo);
+        tool.request({
+            url: tool.getServerUrl('/user/forget_reset_password.do'),
+            data: userInfo, 
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });  
+    },
+    // 获取用户信息
+    getUserInfo: function(resolve, reject){
+        tool.request({
+            url: tool.getServerUrl('/user/get_information.do'), 
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });  
+    },
+    // 更新用户信息
+    updateUserInfo: function(userInfo, resolve, reject){
         tool.request({
             url: tool.getServerUrl('/user/forget_reset_password.do'),
             data: userInfo, 

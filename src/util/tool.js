@@ -2,7 +2,7 @@
  * @Author: FangFeiyue 
  * @Date: 2017-08-10 17:58:13 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-08-11 13:01:47
+ * @Last Modified time: 2017-08-17 11:30:10
  */
 var Hogan = require('hogan.js');
 var conf = {
@@ -56,7 +56,7 @@ var tool = {
         alert(msg || '操作成功！');
     },
     //错误提示
-    failureTips: function(error){
+    errorTips: function(error){
         alert(error || '哪里不对了！');
     },
     //字段的验证，支持非空，手机，邮箱

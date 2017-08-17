@@ -2,7 +2,7 @@
  * @Author: FangFeiyue 
  * @Date: 2017-08-11 13:03:27 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-08-11 14:19:55
+ * @Last Modified time: 2017-08-17 09:31:13
  */
  *{
      margin: 0;
@@ -37,6 +37,26 @@ input[type='checkbox']{
     margin: 0 auto;
     position: relative;
     /*可用于清除浮动  */
+    overflow: hidden;
+}
+
+/* pannel */
+.panel{
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.panel .panel-title{
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    border-bottom:  1px solid #eee;
+}
+
+.panel .panel-body{
+    padding: 10px;
     overflow: hidden;
 }
 
