@@ -38,6 +38,7 @@ var getHtmlConfig = function(name, title){
 }
 
 var config = {
+    devtool: 'cheap-module-eval-source-map',
     entry: {
         'common': ['./src/page/common/index.js'],
         'index': ['./src/page/index/index.js'],

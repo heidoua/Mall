@@ -96,7 +96,7 @@ var _user = {
     // 更新用户信息
     updateUserInfo: function(userInfo, resolve, reject){
         tool.request({
-            url: tool.getServerUrl('/user/forget_reset_password.do'),
+            url: tool.getServerUrl('/user/update_information.do'),
             data: userInfo, 
             method: 'POST',
             success: resolve,
