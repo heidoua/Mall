@@ -48,7 +48,7 @@ var config = {
         'user-register': ['./src/page/user-register/index.js'],
         'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
         'user-center-update': ['./src/page/user-center-update/index.js'],
-        'user-pass-update.html': ['./src/page/user-pass-update/index.js'],
+        'user-pass-update': ['./src/page/user-pass-update/index.js'],
     },
     output: {
         path: './dist',//存放文件的一个路径
