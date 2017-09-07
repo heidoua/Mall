@@ -1,6 +1,16 @@
 var tool = require('util/tool.js');
 
 var _user = {
+    // 登录状态下更新密码
+    updatePassword: function(userInfo, resolve, reject){
+        tool.request({
+            url: tool.getServerUrl('/user/reset_password.do'),
+            data: userInfo,
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });
+    },
     //用户登录
     login: function(userInfo, resolve, reject){
         tool.request({
