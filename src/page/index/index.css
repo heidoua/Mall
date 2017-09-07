@@ -45,6 +45,38 @@ body{
     margin-top: 150px;
 }
 
+.banner-con .banner-img{
+    width: 100%;
+    height: 370px;
+}
+
+/* banner的前一张和后一张按钮 */
+.banner-con .banner-arrow{
+    top: 160px;
+    width: 30px;
+    height: 50px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer ;
+    line-height: 50px;
+    position: absolute;
+    text-align: center;
+    background-color: #ccc;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.banner-con .banner-arrow.prev{
+    left: 0;
+}
+.banner-con .banner-arrow.next{
+    right: 0;
+}
+
+.banner-con .banner-arrow:hover{
+    background-color: #aaa;
+    background-color: rgba(0, 0, 0, .5);
+}
+
 /* floor */
 .floor-wrap .floor-title{
      height: 50px;
@@ -53,6 +85,23 @@ body{
      line-height: 50px;
      font-weight: normal;
      border-bottom: 1px solid #d58717;     
+}
+/* 更改各楼层标题颜色 */
+.floor-wrap:nth-child(2) .floor-title{
+    color: #3d838c; 
+    border-bottom: 1px solid #3d838c; 
+}
+.floor-wrap:nth-child(3) .floor-title{
+    color: #a93931; 
+    border-bottom: 1px solid #a93931; 
+}
+.floor-wrap:nth-child(4) .floor-title{
+    color: #488bad; 
+    border-bottom: 1px solid #488bad; 
+}
+.floor-wrap:nth-child(5) .floor-title{
+    color: #642663; 
+    border-bottom: 1px solid #642663; 
 }
 
 .floor-list{
@@ -68,6 +117,10 @@ body{
     position: relative;
     margin: 15px 20px 15px 0;
     background-color: #fff;
+}
+
+.floor-wrap .floor-list .floor-item:hover{
+    box-shadow: 1px 1px 7px #ddd;
 }
 
 .floor-wrap .floor-list .floor-item .floor-text{

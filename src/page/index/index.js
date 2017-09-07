@@ -37,23 +37,28 @@ var tool = require('util/tool.js');
 //  var html = '<div>{{ data }}</div>';
 //  console.log(tool.renderHtml(html, data));
 
-
 require('./index.css');
+require('util/slider/index.js');
+var templateBanner = require('./banner.string');
 //测试nav-simple
 require('page/common/nav-simple/index.js');
-
-
 //测试nav
 require('page/common/nav/index.js');
-
-
 //测试header
 require('page/common/header/index.js');
-
 //测试nav-side
 var navSide = require('page/common/nav-side/index.js');
 
 navSide.init({
     name: 'order-list'
+});
+
+// unslider初始化
+$(function() {
+    var  bannerHtml = tool.renderHtml(templateBanner);
+    $('.banner-con').html(bannerHtml);
+    $('.banner').unslider({
+        dots: true  
+    });
 });
 

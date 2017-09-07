@@ -1,0 +1,41 @@
+/*
+ * @Author: FangFeiyue 
+ * @Date: 2017-09-07 14:09:46 
+ * @Last Modified by: FangFeiyue
+ * @Last Modified time: 2017-09-07 14:32:31
+ */
+.banner {
+  position: relative;
+  overflow: auto;
+}
+.banner li {
+  list-style: none;
+}
+.banner ul li {
+  float: left;
+}
+.banner .dots{
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    position: absolute;
+    text-align: center;
+}
+.banner .dots li {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    opacity: .4;
+    cursor: pointer;
+    border-radius: 6px;
+    text-indent: -999em;
+    border: 2px solid #fff;
+    display: inline-block;
+    -webkit-transition: background .5s, opacity .5s;
+    -moz-transition: background .5s, opacity .5s;
+    transition: background .5s, opacity .5s;
+}
+.banner .dots li.active {
+    opacity: 1;
+    background: #fff;
+}
