@@ -1,3 +1,91 @@
 body{
     /* background-image: url('../../image/01.jpg'); */
 }
+
+/* keywords-list */
+.keywords-list{
+    float: left;
+    width: 240px;
+    color: #fff;
+    height: 350px;
+    padding: 10px 0;
+    margin-right: 10px;
+    background-color: #666;
+}
+
+.keywords-list .keywords-item{
+    height: 35px;
+    font-size: 14px;
+    line-height: 35px;
+    padding-left: 10px;
+}
+
+.keywords-list .keywords-item:hover{
+    background-color: #999; 
+}
+
+.keywords-list .keywords-item .link{
+    color: #fff;
+    margin-right: 6px;
+}
+
+.keywords-list .keywords-item .link:hover{
+    color: #c60023;
+}
+
+/* banner-con */
+ .banner-con{
+     float: left; 
+     width: 830px;
+     height: 370px;    
+     background-color: #eee;
+}
+
+.banner-con .loading{
+    margin-top: 150px;
+}
+
+/* floor */
+.floor-wrap .floor-title{
+     height: 50px;
+     font-size: 20px;
+     color: #d58717;
+     line-height: 50px;
+     font-weight: normal;
+     border-bottom: 1px solid #d58717;     
+}
+
+.floor-list{
+    overflow: hidden;
+    margin-right: -20px;
+}
+
+.floor-wrap .floor-item{
+    float: left;
+    width: 200px;
+    height: 220px;  
+    cursor: pointer;
+    position: relative;
+    margin: 15px 20px 15px 0;
+    background-color: #fff;
+}
+
+.floor-wrap .floor-list .floor-item .floor-text{
+    top: 12px;
+    left: 20px;
+    color: #555; 
+    font-size: 16px;
+    position: absolute;
+}
+
+.floor-wrap .floor-list .floor-item .floor-img{
+    width: 80%;
+    height: 75%;
+    right: 15px;
+    bottom: 10px;
+    border: none;
+    position: absolute;
+}
+
+ 
+
