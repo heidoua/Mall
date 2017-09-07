@@ -38,6 +38,7 @@ var tool = require('util/tool.js');
 //  console.log(tool.renderHtml(html, data));
 
 
+require('./index.css');
 //测试nav-simple
 require('page/common/nav-simple/index.js');
 
