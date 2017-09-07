@@ -1,0 +1,23 @@
+/*
+ * @Author: FangFeiyue 
+ * @Date: 2017-08-17 09:38:49 
+ * @Last Modified by: FangFeiyue
+ * @Last Modified time: 2017-08-17 10:51:52
+ */
+ .form-line{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.form-line .label{
+    width: 60px;
+    display: inline-block;
+    text-align: right;
+}
+.form-line .input{
+    height: 25px;
+    line-height: 25px;
+    width: 200px;
+}
