@@ -19,5 +19,5 @@
         <span class="label">答 案 ：</span>
         <input class="input" id="answer" autocomplete="off" value="{{answer}}"/>
     </div>
-    <a href="./user-center-update.html" class="btn btn-submit">提交</a>
+    <a href="./user-center.html" class="btn btn-submit">提交</a>
 </div>
