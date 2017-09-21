@@ -2,11 +2,11 @@
  * @Author: FangFeiyue 
  * @Date: 2017-09-21 13:44:27 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-09-21 13:53:21
+ * @Last Modified time: 2017-09-21 14:32:26
  */
 /* 排序按钮 */
 .sort-con{
-
+    overflow: hidden;
 }
 
 .sort-con .sort-item{
