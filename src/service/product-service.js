@@ -2,7 +2,7 @@
  * @Author: FangFeiyue 
  * @Date: 2017-09-08 09:30:09 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-09-21 14:08:38
+ * @Last Modified time: 2017-09-21 15:41:51
  */
 var tool = require('util/tool.js');
 
@@ -12,7 +12,6 @@ var _product = {
         tool.request({
             url: tool.getServerUrl('/product/list.do'),
             data: listParam,
-            method: 'POST',
             success: resolve,
             error: reject
         });

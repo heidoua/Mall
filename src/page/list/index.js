@@ -2,7 +2,7 @@
  * @Author: FangFeiyue 
  * @Date: 2017-09-08 09:28:11 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-09-21 14:30:56
+ * @Last Modified time: 2017-09-21 16:47:11
  */
 require("./index.css");
 require("page/common/nav/index.js");
@@ -29,7 +29,7 @@ var page = {
         this.loadList();
     },
     bindEvent: function(){
-
+        
     },
     // 加载list数据
     loadList: function(){
@@ -42,7 +42,6 @@ var page = {
             listHtml = tool.renderHtml(templateIndex, {
                 list: res.list 
             });
-            console.log('testtttt====>', listHtml);
             $('.p-list-con').html(listHtml);
             _this.loadPagination(res.pageNum,  res.pages);
         }, function(errMsg){
