@@ -1,0 +1,45 @@
+/*
+ * @Author: FangFeiyue 
+ * @Date: 2017-09-21 13:44:27 
+ * @Last Modified by: FangFeiyue
+ * @Last Modified time: 2017-09-21 13:53:21
+ */
+/* 排序按钮 */
+.sort-con{
+
+}
+
+.sort-con .sort-item{
+    float: left;
+    height: 24px;
+    color: #333;
+    padding: 0 8px;
+    cursor: pointer;
+    line-height: 24px;
+    position: relative;
+    /* 左右相邻的元素都给了border，导致紧挨着的border比别的地方宽 */
+    margin-right: -1px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.sort-con .sort-item.active{
+    color: #fff;    
+    background-color: #c60023;
+    border: 1px solid #c60023;
+}
+
+.sort-con .sort-item .fa-sort-desc{
+    top: 8px;
+    right: 8px;
+    position: absolute;
+}
+
+.sort-con .sort-item.asc .fa-sort-desc{
+    opacity: 0.8;
+}
+
+.sort-con .sort-item.desc .fa-sort-asc{
+    opacity: 0.8;
+}
