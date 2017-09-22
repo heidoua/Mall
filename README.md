@@ -1,5 +1,10 @@
 # Mall
 电商项目(PC端)
+# 使用步骤
+```
+npm install
+npm run dev
+```
 # 主要功能
 一、网站首页功能特点
 
