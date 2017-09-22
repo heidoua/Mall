@@ -2,7 +2,7 @@
  * @Author: FangFeiyue 
  * @Date: 2017-09-08 09:28:11 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-09-22 14:03:41
+ * @Last Modified time: 2017-09-22 14:30:39
  */
 require("./index.css");
 var tool = require("util/tool.js");
@@ -18,8 +18,8 @@ var page = {
             pageNum: tool.getUrlParam('pageNum') || 1,
             orderBy: tool.getUrlParam('orderBy') || 'default',
             keyword: tool.getUrlParam('keyword') || '',
-            pageSize: tool.getUrlParam('pageSize') || 5,
-            categoryid: tool.getUrlParam('categoryid') || ''
+            pageSize: tool.getUrlParam('pageSize') || 20,
+            categoryId: tool.getUrlParam('categoryId') || ''
         }    
     },
     init: function(){
@@ -75,8 +75,7 @@ var page = {
         $pListCon.html('<div class="loading"></div>');
         
         // 删除参数中不必要的字段
-        listParam.categoryid ? (delete listParam.keyword) : (delete listParam.categoryid);
-        
+        listParam.categoryId ? (delete listParam.keyword) : (delete listParam.categoryId);
         // 获取list列表
         _product.getProductList(listParam, function(res){ 
             listHtml = tool.renderHtml(templateIndex, {
