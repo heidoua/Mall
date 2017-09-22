@@ -2,7 +2,7 @@
  * @Author: FangFeiyue 
  * @Date: 2017-09-22 10:58:30 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-09-22 13:57:19
+ * @Last Modified time: 2017-09-22 14:06:29
  */
 require('./index.css');
 var tool = require('util/tool.js');
@@ -22,7 +22,7 @@ var Pagination = function(){
         // 对于active和disabled按钮点击，不做处理
         if($this.hasClass('active') || $this.hasClass('disabled')){
             return;
-        }
+        }   
         typeof _this.option.onSelectPage === 'function' 
             ? _this.option.onSelectPage($this.data('value')) : null;
     });

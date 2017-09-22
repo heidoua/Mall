@@ -28,6 +28,13 @@
 # 遇到的问题
 1.因为是用的别人服务器上的数据，所以出现了跨域问题，但没法跟人商量，让人来解决跨域的问题，所以找了个临时的方法解决跨域
 
+2.做商品列表分页时，如果点击分页过快，文字就会被选中，解决的办法，利用css3中的user-select新属性来解决。
+```
+-moz-user-select : none;
+-webkit-user-select : none;
+-ms-user-select : none;
+user-select : none;
+```
 . 商品列表排序按钮左右相邻的元素都给了border，导致紧挨着的border比别的地方宽　
 ```
 margin-right: -1px;
