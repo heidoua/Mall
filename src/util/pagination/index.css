@@ -1,0 +1,39 @@
+/*
+ * @Author: FangFeiyue 
+ * @Date: 2017-09-22 13:33:57 
+ * @Last Modified by: FangFeiyue
+ * @Last Modified time: 2017-09-22 13:42:33
+ */
+ .pg-content{
+    color: #333;
+    text-align: center;
+}
+.pg-content .pg-item{
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 15px;
+    margin: 0 2px;
+    border: 1px solid #ccc;
+    background: #eee;
+    cursor: pointer;
+    -moz-user-select : none;
+    -webkit-user-select : none;
+    -ms-user-select : none;
+    user-select : none;
+}
+.pg-content .pg-item.disabled{
+    cursor: auto;
+    color: #ccc;
+    background: none;
+}
+.pg-content .pg-item.active{
+    cursor: auto;
+    background: none;
+    border: 1px solid #f6f6f6;
+}
+.pg-content .pg-total{
+    cursor: auto;
+    background: none;
+    margin-left: 10px;
+}

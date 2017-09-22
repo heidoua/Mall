@@ -2,13 +2,14 @@
  * @Author: FangFeiyue 
  * @Date: 2017-09-08 09:28:11 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-09-21 18:20:45
+ * @Last Modified time: 2017-09-22 13:54:40
  */
 require("./index.css");
 var tool = require("util/tool.js");
 require("page/common/nav/index.js");
 require("page/common/header/index.js");
 var templateIndex = require("./index.string");
+var Pagination = require('util/pagination/index.js');
 var _product = require("service/product-service.js");
 
 var page = {
@@ -17,7 +18,7 @@ var page = {
             pageNum: tool.getUrlParam('pageNum') || 1,
             orderBy: tool.getUrlParam('orderBy') || 'default',
             keyword: tool.getUrlParam('keyword') || '',
-            pageSize: tool.getUrlParam('pageSize')  || 20,
+            pageSize: tool.getUrlParam('pageSize') || 5,
             categoryid: tool.getUrlParam('categoryid') || ''
         }    
     },
@@ -82,14 +83,24 @@ var page = {
                 list: res.list 
             });
             $pListCon.html(listHtml);
-            _this.loadPagination(res.pageNum,  res.pages);
+            _this.loadPagination({
+                pages: res.pages,  
+                prePage: res.prePage,
+                pageNum: res.pageNum,
+                nextPage: res.nextPage, 
+                hasNextPage: res.hasNextPage,
+                hasPreviousPage: res.hasPreviousPage
+            });
         }, function(errMsg){
             tool.errorTips(errMsg);
         });     
     },
     // 加载分页信息
-    loadPagination: function(pageNum, pages ){
-         
+    loadPagination: function(pageInfo){
+        this.pagination ? '' : this.pagination = new Pagination();
+        this.pagination.render($.extend({}, pageInfo, {
+            container: $('.pagination')
+        }));  
     }
 };
 
