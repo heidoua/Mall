@@ -35,7 +35,7 @@
 -ms-user-select : none;
 user-select : none;
 ```
-. 商品列表排序按钮左右相邻的元素都给了border，导致紧挨着的border比别的地方宽　
+3.商品列表排序按钮左右相邻的元素都给了border，导致紧挨着的border比别的地方宽　
 ```
 margin-right: -1px;
 ```
