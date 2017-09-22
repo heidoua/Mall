@@ -2,7 +2,7 @@
  * @Author: FangFeiyue 
  * @Date: 2017-08-10 17:39:51 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-09-08 09:24:07
+ * @Last Modified time: 2017-09-22 15:17:40
  */
 /*对脚本的处理
 1.js用什么loader加载
@@ -42,6 +42,7 @@ var config = {
     entry: {
         'index': ['./src/page/index/index.js'],
         'list': ['./src/page/list/index.js'],
+        'detail ': ['./src/page/detail/index.js'],
         'common': ['./src/page/common/index.js'],
         'result': ['./src/page/result/index.js'],
         'user-login': ['./src/page/user-login/index.js'],
@@ -93,6 +94,7 @@ var config = {
         //html模板的处理
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表页')),
+        new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
