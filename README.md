@@ -73,3 +73,22 @@ user-select : none;
 ```
 margin-right: -1px;
 ```
+## 个人简介
+作者：房飞跃
+
+博客地址：[前端网](http://www.qdfuns.com/house/31986/note)  [博客园](https://www.cnblogs.com/fangfeiyue)  [GitHub](https://github.com/fangfeiyue)
+
+职业：web前端开发工程师
+
+爱好：探索新事物，学习新知识
+
+座右铭：一个终身学习者
+
+## 联系方式
+坐标：北京
+
+QQ：294925572
+
+微信：
+
+![XinShiJieDeHuHuan](http://note.youdao.com/yws/public/resource/c2361265179a03449f6d52397fd50033/xmlnote/100D55934BB446839482D3EA0CDC3E8D/17820)
