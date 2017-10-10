@@ -96,6 +96,10 @@ entry: {'detail': ['./src/page/detail/index.js']}
 ```
 <div class="detail-con">{{{detail}}}</div>
 ```
+7.在markdown中输入html标签会出现不显示的情况，因为被默认为是一种标签，解决办法：用``包裹html标签
+```
+`<p>`我是markdown里的html标签`</p>`
+```
 ## 说明
 如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
 
