@@ -40,7 +40,7 @@ var page = {
         _product.getProductDetail(this.data.productId, function(res){
             _this.filter(res);
             html = tool.renderHtml(templateIndex, res);
-            console.log('html====>', html);
+            console.log(html);
             $pageWrap.html(html);     
         }, function(errMsg) { 
             $pageWrap.html('<p class="err-tip">此商品太淘气，找不到了</p>'); 

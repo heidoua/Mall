@@ -1,13 +1,13 @@
 <div class="intro-wrap">
     <div class="p-img-con">
         <div class="main-img-con">
-            <img class="main-img" src="{{imageHost}}{{mainImage}}" alt="{{name} }">
+            <img class="main-img" src="{{imageHost}}{{mainImage}}" alt="{{name}}">
         </div>
-        <ul class="p-img-list">
+        <ul>
             {{#subImages}}
-            <li class="p-img-item">
-                <img class='p-img' src="{{imageHost}}{{.}}" alt="{{name}}">
-            </li>
+                <li class="p-img-item">
+                    <img class="p-img" src="{{imageHost}}{{.}}" alt="{{name}}">
+                </li>
             {{/subImages}}
         </ul>
     </div>
