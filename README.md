@@ -3,12 +3,12 @@
 ```
 https://github.com/fangfeiyue/Mall.git
 ```
-# 运行项目
+## 运行项目
 ```
 npm install
 npm run dev
 ```
-# 主要功能
+## 主要功能
 一、网站首页功能特点
 
 推荐搜索关键字的快捷链接
@@ -33,7 +33,7 @@ npm run dev
 添加购物车的接口所需字段：productId, count
 查询购物车产品数量所需字段：无　
 
-# 遇到的问题
+## 遇到的问题
 1.因为是用的别人服务器上的数据，所以出现了跨域问题，但没法跟人商量，让人来解决跨域的问题，所以找了个临时的方法解决跨域
 [暂时解决跨域的办法](http://www.qdfuns.com/notes/31986/63184ce6a03d35b736e7f78eca43a3ae.html)  
 
