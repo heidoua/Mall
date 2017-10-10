@@ -14,7 +14,7 @@ npm run dev
 ### 技术选型
 - 版本控制：git
 - 软件开发过程：敏捷开发
-- 框架选择：jQuery + css
+- 框架选择：jQuery + css + Hogan
 - 模块化方案：CommonJS + Webpack
 - 前后端分离方式：完全分离，纯静态方式
 
@@ -83,6 +83,18 @@ margin-right: -1px;
 4.在写商品详情页的时候导航、搜索等样式失效,找了半天也没到原因，看哪里都正确，后来一句句代码从头过，才发现犯了个特低级的错误,在webpack配置文件中配置详情页的entry时，'detail'后面多加了空格,去掉空格就好了
 ```
 entry: {'detail': ['./src/page/detail/index.js']}
+```
+5.商品详情宝贝的缩略图地址放到了一个索引数组中，如何顺序将数组中的元素渲染出来呢？在Hogan中，点表示当前的元素
+```
+{{#subImages}}
+    <li class="p-img-item">
+        <img class='p-img' src="{{imageHost}}{{.}}" alt="{{name}}">
+    </li>
+{{/subImages}}
+```
+6.用Hogan渲染商品详情页详情信息的时候，因为后台返回的数据包含在了html标签中，如果用两个花括号取值，页面显示的是html标签包裹的数据如：<p>这是一个款好手机</p>，我们想要页面直接渲染出数据而不是是html标签，此时要用三个花括号包裹
+```
+<div class="detail-con">{{{detail}}}</div>
 ```
 ## 说明
 如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！ ^_^

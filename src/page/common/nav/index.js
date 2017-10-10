@@ -15,7 +15,6 @@ var nav = {
         this.bindEvent();
         this.loadUserInfo();
         this.loadCartCount();
-        console.log('woshinav======woshihinva');
         return this;
     },
     bindEvent: function(){
