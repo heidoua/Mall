@@ -9,7 +9,7 @@ var tool = require("util/tool.js");
 require("page/common/nav/index.js");
 require("page/common/header/index.js");
 var templateIndex = require("./index.string");
-// var Pagination = require('util/pagination/index.js');
+var _cart = require("service/cart-service.js");
 var _product = require("service/product-service.js");
 
 var page = {
@@ -18,6 +18,7 @@ var page = {
     },
     init: function(){
         this.onLoad();
+        this.bindEvent();
     },
     onLoad: function(){
         // 如果没有productId则自动跳转回首页
@@ -27,6 +28,37 @@ var page = {
         this.loadDetail(); 
     },
     bindEvent: function(){   
+        var _this = this;
+        // 图片预览
+        $(document).on('mouseenter','.p-img-item',function(){
+            var imgUrl = $(this).find('.p-img').attr('src');
+            $('.main-img').attr('src', imgUrl);
+        });
+        // count的操作
+        $(document).on('click', '.p-count-btn', function(){
+            var type = $(this).hasClass('plus') ? 'plus' : 'minus',
+                $pCount = $('.p-count'),
+                currentCount = parseInt($pCount.val()),
+                minCount = 1,
+                maxCount =  _this.data.detailInfo.stock || 1;
+
+            if (type === 'plus'){
+                $pCount.val(currentCount < maxCount ? currentCount + 1 : maxCount);
+            }else if(type === 'minus'){
+                $pCount.val(currentCount > minCount ? currentCount - 1 : minCount);
+            }
+        });
+        // 加入购物车
+        $(document).on('click', '.cart-add', function(){
+            _cart.addToCart({
+                productId: _this.data.productId,
+                count: $('.p-count').val()
+            }, function(res){
+                window.location.href = './result.html?type=cart-add';
+            }, function(errMsg){
+                tool.errorTips(errMsg);
+            });
+        });
     },
     // 加载商品详情数据 
     loadDetail: function(){
@@ -39,6 +71,7 @@ var page = {
         // 请求detail信息  
         _product.getProductDetail(this.data.productId, function(res){
             _this.filter(res);
+            _this.data.detailInfo = res;
             html = tool.renderHtml(templateIndex, res);
             console.log(html);
             $pageWrap.html(html);     

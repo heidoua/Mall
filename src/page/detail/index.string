@@ -20,7 +20,7 @@
             </div>
             <div class="p-info-item">
                 <span class="label">库存：</span>
-                <span class="info">{stock}</span>
+                <span class="info">{{stock}}</span>
             </div>
             <div class="p-info-item p-count-con">
                 <span class="label">数量：</span>

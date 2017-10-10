@@ -15,6 +15,15 @@ var _cart = {
             error   : reject
         });
     },
+    // 添加购物车 
+    addToCart : function(productInfo, resolve, reject){
+        tool.request({
+            url     : tool.getServerUrl('/cart/add.do'),
+            data:  productInfo,
+            success : resolve,
+            error   : reject
+        });
+    },
 
 };
 
