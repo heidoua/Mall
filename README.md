@@ -80,6 +80,10 @@ user-select : none;
 ```
 margin-right: -1px;
 ```
+4.在写商品详情页的时候导航、搜索等样式失效,找了半天也没到原因，看哪里都正确，后来一句句代码从头过，才发现犯了个特低级的错误,在webpack配置文件中配置详情页的entry时，'detail'后面多加了空格,去掉空格就好了
+```
+entry: {'detail': ['./src/page/detail/index.js']}
+```
 ## 说明
 如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
 

@@ -42,7 +42,7 @@ var config = {
     entry: {
         'index': ['./src/page/index/index.js'],
         'list': ['./src/page/list/index.js'],
-        'detail ': ['./src/page/detail/index.js'],
+        'detail': ['./src/page/detail/index.js'],
         'common': ['./src/page/common/index.js'],
         'result': ['./src/page/result/index.js'],
         'user-login': ['./src/page/user-login/index.js'],
