@@ -1,6 +1,5 @@
-# Mall
-电商项目(PC端)
-# 下载源码
+# 电商项目(PC端)
+## 下载源码
 ```
 https://github.com/fangfeiyue/Mall.git
 ```
