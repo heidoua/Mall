@@ -11,3 +11,26 @@ require("page/common/header/index.js");
 // var templateIndex = require("./index.string");
 // var Pagination = require('util/pagination/index.js');
 // var _product = require("service/product-service.js");
+
+var page = {
+    data: {
+        productId: tool.getUrlParam('productId') || ''
+    },
+    init: function(){
+
+    },
+    onLoad: function(){
+        
+    },
+    bindEvent: function(){
+        // 如果没有productId则自动跳转回首页
+        if(!this.data.productId){
+            tool.goHome();
+        }
+        this.loadDetail ();    
+    },
+    // 加载商品详情数据 
+    loadDetail: function(){
+
+    }
+};
