@@ -14,7 +14,7 @@ npm run dev
 ### 技术选型
 - 版本控制：git
 - 软件开发过程：敏捷开发
-- 框架选择：jQuery + css + (Hogan)[http://www.imooc.com/article/18493]
+- 框架选择：jQuery + css + !(Hogan)[http://www.imooc.com/article/18493]
 - 模块化方案：CommonJS + Webpack
 - 前后端分离方式：完全分离，纯静态方式
 
