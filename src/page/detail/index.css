@@ -143,3 +143,12 @@
     display: block; 
     margin: 0 auto;
  } 
+ .err-tip{
+     height: 60px;
+     line-height: 60px;
+     color: #f60;
+     font-size: 16px;
+     font-weight: bold;
+     text-align: center;
+     background-color: #eee;
+ }
