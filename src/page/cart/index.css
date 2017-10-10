@@ -1,0 +1,46 @@
+/*
+ * @Author: FangFeiyue 
+ * @Date: 2017-10-10 17:23:15 
+ * @Last Modified by: FangFeiyue
+ * @Last Modified time: 2017-10-10 18:17:45
+ */
+.cart-table{
+    width: 100%;
+    /* 两个边距重合让它合成一个 */
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin-bottom: 10px;
+}
+/* header */
+.cart-header{
+     background-color: #eee;
+}
+.cart-header .cart-cell{
+    height: 40px;
+    line-height: 40px;
+}
+.cart-table .cell-check{
+    width: 10%;
+    text-align: left;
+    padding-left: 20px;
+}
+.cart-table .cell-info{
+    width: 45%;
+    text-align: left;
+}
+.cart-table .cell-price{
+    width: 10%;
+    text-align: center;
+}
+.cart-table .cell-count{
+    width: 15%;
+    text-align: center;
+}
+.cart-table .cell-total{
+    width: 10%;
+    text-align: center;
+}
+.cart-table .cell-opera{
+    width: 10%;
+    text-align: center;
+}
