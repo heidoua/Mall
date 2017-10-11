@@ -112,7 +112,19 @@ entry: {'detail': ['./src/page/detail/index.js']}
 8. 对接支付宝
 - 支付宝支付的两种对接方式
     - return_url方式
+
     ![return_url方式](http://note.youdao.com/yws/public/resource/c2361265179a03449f6d52397fd50033/xmlnote/C68F1402C7614F5FBA4DD9D8C7A8BBB6/17824)
+
+    在这个过程中return_url一定是个后端的页面，如果在前后端完全分离，想使用这种方式，必须先跳到一个后端提供的页面上，处理完逻辑后，通过js跳转到前端页面上。最后一步url跳转的时候，用户把浏览器关掉，我们的支付结果是得不到通知的
+
+    - notify_url方式
+    
+    ![notify_url方式](http://note.youdao.com/yws/public/resource/c2361265179a03449f6d52397fd50033/xmlnote/7103477ED3EF46F3BA20A39AEF1ABEE4/17826)   
+
+9.支付页面功能点
+- 请求支付，获取支付二维码
+- 轮询检查订单状态，支付成功跳转提示页
+-     
 vscode使用过程中安装的插件：
 - Alignment
     - 作用： 代码对齐
