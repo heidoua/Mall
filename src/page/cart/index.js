@@ -12,9 +12,7 @@ var _cart         = require("service/cart-service.js");
 var nav           = require("page/common/nav/index.js");
 
 var page = {
-    data: {
-         
-    },
+    data: {},
     init: function(){
         this.onLoad();
         this.bindEvent();
