@@ -17,6 +17,7 @@ npm run dev
 - 框架选择：jQuery + css + [Hogan](http://www.qdfuns.com/notes/31986/c84f112cf773005a31caacc3736da971.html)
 - 模块化方案：CommonJS + Webpack
 - 前后端分离方式：完全分离，纯静态方式
+- 开发工具：vscode
 
 ### 几大模块简介：
 - 用户模块
@@ -108,6 +109,16 @@ entry: {'detail': ['./src/page/detail/index.js']}
 ```
 `<p>`我是markdown里的html标签`</p>`
 ```
+
+vscode使用过程中安装的插件：
+- Alignment
+    - 作用： 代码对齐
+    - 使用方法：option + +=
+- GitLens
+    - 显示文件最近的commit和作者，显示当前行commit信息
+- highlight-matching-tag
+    - 作用：html标签配对
+
 ## 说明
 如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
 

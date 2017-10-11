@@ -2,7 +2,7 @@
  * @Author: FangFeiyue 
  * @Date: 2017-08-15 18:00:53 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-10-11 10:02:52
+ * @Last Modified time: 2017-10-11 15:16:58
  */
 var tool = require('util/tool.js');
 
@@ -70,6 +70,28 @@ var _cart = {
             error   : reject
         });
     },
+    // 更新购物车商品数量 
+    updateCartProductCount : function(productInfo, resolve, reject){
+        tool.request({
+            url     : tool.getServerUrl('/cart/update.do'),
+            data:productInfo,
+            success : resolve,
+            error   : reject
+        });
+    },
+    // 删除商品  
+    deleteProduct : function(productIds, resolve, reject){
+        tool.request({
+            url     : tool.getServerUrl('/cart/delete_product.do'),
+            data    : {
+                productIds: productIds
+            },
+            success : resolve,
+            error   : reject
+        });
+    },
+    // 删除选中
+     
 };
 
 module.exports  = _cart;

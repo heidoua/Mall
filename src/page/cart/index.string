@@ -68,7 +68,7 @@
         <span>全选</span>
     </div>
     <div class="delete-con">
-        <span class="link">
+        <span class="link delete-selected">
             <i class="fa fa-trash-o"></i>
             <span>删除选中</span>
         </span>
