@@ -109,7 +109,10 @@ entry: {'detail': ['./src/page/detail/index.js']}
 ```
 `<p>`我是markdown里的html标签`</p>`
 ```
-
+8. 对接支付宝
+- 支付宝支付的两种对接方式
+    - return_url方式
+    ![return_url方式](http://note.youdao.com/yws/public/resource/c2361265179a03449f6d52397fd50033/xmlnote/C68F1402C7614F5FBA4DD9D8C7A8BBB6/17824)
 vscode使用过程中安装的插件：
 - Alignment
     - 作用： 代码对齐
