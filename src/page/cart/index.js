@@ -53,8 +53,8 @@ var page = {
         this.data.cartInfo = data;
         var cartHtml       = tool.renderHtml(templateIndex, data);
         $('.page-wrap').html(cartHtml); 
-        // 通知导航的购物车更新数量
-         
+        // 通知导航条的购物车更新数量
+        nav.loadCartCount(); 
     },
     // 数据匹配
     filter: function(data){ 
