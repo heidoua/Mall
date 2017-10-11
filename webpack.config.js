@@ -17,16 +17,16 @@
 3.
 */
 
-var webpack = require('webpack');
+var webpack           = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 //环境变量的配置：分为dev和online
-var WEBPACK_EVN = process.env.WEBPACK_EVN || 'dev';
+var WEBPACK_EVN       = process.env.WEBPACK_EVN || 'dev';
 
 console.log(WEBPACK_EVN); 
 
-var getHtmlConfig = function(name, title){
+var getHtmlConfig     = function(name, title){
      return {
         title: title,
         filename: 'view/' + name + '.html',
@@ -40,18 +40,18 @@ var getHtmlConfig = function(name, title){
 var config = {
     devtool: 'cheap-module-eval-source-map',
     entry: {
-        'index': ['./src/page/index/index.js'],
-        'list': ['./src/page/list/index.js'],
-        'detail': ['./src/page/detail/index.js'],
-        'cart': ['./src/page/cart/index.js'],
-        'common': ['./src/page/common/index.js'],
-        'result': ['./src/page/result/index.js'],
-        'user-login': ['./src/page/user-login/index.js'],
-        'user-center': ['./src/page/user-center/index.js'],
-        'user-register': ['./src/page/user-register/index.js'],
-        'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
+        'index'             : ['./src/page/index/index.js'],
+        'list'              : ['./src/page/list/index.js'],
+        'detail'            : ['./src/page/detail/index.js'],
+        'cart'              : ['./src/page/cart/index.js'],
+        'common'            : ['./src/page/common/index.js'],
+        'result'            : ['./src/page/result/index.js'],
+        'user-login'        : ['./src/page/user-login/index.js'],
+        'user-center'       : ['./src/page/user-center/index.js'],
+        'user-register'     : ['./src/page/user-register/index.js'],
+        'user-pass-reset'   : ['./src/page/user-pass-reset/index.js'],
         'user-center-update': ['./src/page/user-center-update/index.js'],
-        'user-pass-update': ['./src/page/user-pass-update/index.js'],
+        'user-pass-update'  : ['./src/page/user-pass-update/index.js'],
     },
     output: {
         path: './dist',//存放文件的一个路径
@@ -77,11 +77,11 @@ var config = {
     //配置别名
     resolve: {
         alias: {
-            util: __dirname + '/src/util',//__dirname表示当前根目录
+            util        : __dirname + '/src/util',//__dirname表示当前根目录
             node_modules: __dirname + '/node_modules',//为了获取字体
-            page: __dirname + '/src/page',
-            service: __dirname + '/src/service',
-            image: __dirname + '/src/image'
+            page        : __dirname + '/src/page',
+            service     : __dirname + '/src/service',
+            image       : __dirname + '/src/image'
         }
     },
     plugins: [
