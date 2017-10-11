@@ -28,12 +28,12 @@ console.log(WEBPACK_EVN);
 
 var getHtmlConfig     = function(name, title){
      return {
-        title: title,
+        title   : title,
         filename: 'view/' + name + '.html',
         template: './src/view/' + name + '.html',
-        inject: true,//true默认值，script标签位于html文件的;  body 底部。body同true;   head script 标签位于 head 标签内; false 不插入生成的 js 文件，只是单纯的生成一个 html 文件
-        hash: true,
-        chunks: ['common', name]
+        inject  : true,//true默认值，script标签位于html文件的;  body 底部。body同true;   head script 标签位于 head 标签内; false 不插入生成的 js 文件，只是单纯的生成一个 html 文件
+        hash    : true,
+        chunks  : ['common', name]
      };
 }
 
@@ -54,22 +54,22 @@ var config = {
         'user-pass-update'  : ['./src/page/user-pass-update/index.js'],
     },
     output: {
-        path: './dist',//存放文件的一个路径
+        path      : './dist',//存放文件的一个路径
         publicPath: '/dist',//访问文件时的一个路径
-        filename: 'js/[name].js'
+        filename  : 'js/[name].js'
     },
-    externals: {//可以把外部的变量或者模块加载进来
-        'jquery': 'window.jQuery'
+    externals     : {//可以把外部的变量或者模块加载进来
+        'jquery'  : 'window.jQuery'
     },
     module: {
-        loaders: [{
-                test:/\.css$/,
+        loaders       : [{
+                test  : /\.css$/,
                 loader: ExtractTextPlugin.extract("style-loader","css-loader")   
             },{
-                test:/\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,
-                loader: 'url-loader?limit=100&name=resource/[name].[ext]'
+                test  : /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,
+                loader: 'url-loader?limit = 100&name = resource/[name].[ext]'
             },{
-                test:/\.string$/,
+                test  : /\.string$/,
                 loader: 'html-loader'
             }
         ]
@@ -87,7 +87,7 @@ var config = {
     plugins: [
         //独立通用模块
         new webpack.optimize.CommonsChunkPlugin({
-            name:  'common',
+            name    : 'common',
             filename: 'js/base.js'
         }),
         //把css单独打包到文件里
