@@ -6,22 +6,24 @@
         <th class="cell-count">数量</th>
         <th class="cell-total">小计</th>
     </tr>
+    {{#orderItemVoList}}
     <tr>
         <td class="cell-img">
-            <a href="./detail.html?productId" target="_blank">
-                <img src="http://img.happymmall.com/7d71fc85-1d6a-4613-b9b7-c8956d8a38d5.jpg" alt="xx" class="p-img">
+            <a href="./detail.html?productId={{productId}}" target="_blank">
+                <img src="{{imageHost}}{{productImage}}" alt="{{productName}}" class="p-img">
             </a>
         </td>
         <td class="cell-info">
-            <a class="link" href="./detail.html?productId">xxxxx</a>
+            <a target="_blank" class="link" href="./detail.html?productId={{productId}}">{{productName}}</a>
         </td>
-        <td class="cell-price">xxx</td>
-        <td class="cell-count">xxx</td>
-        <td class="cell-total">xxx</td> 
+        <td class="cell-price">￥{{currentUnitPrice}}</td>
+        <td class="cell-count">{{quantity}}</td>
+        <td class="cell-total">{{totalPrice}}</td> 
     </tr>
+    {{/orderItemVoList}}
 </table>
 <div class="submit-con">
         <span>订单总价:</span>
-        <span class="submit-total">￥3333</span>
+        <span class="submit-total">￥{{productTotalPrice}}</span>
         <span class="btn order-submit">提交订单</span>
 </div>

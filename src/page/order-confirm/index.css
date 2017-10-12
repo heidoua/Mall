@@ -2,9 +2,10 @@
  * @Author: FangFeiyue 
  * @Date: 2017-10-12 16:04:59 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-10-12 16:57:18
+ * @Last Modified time: 2017-10-12 18:27:55
  */
- .address-item{
+ .address-item,
+ .address-add{
      margin: 20px 20px 0 0;
      width: 200px;
      padding: 5px 10px;
@@ -15,7 +16,8 @@
  .address-item.active{
      border: 3px dashed #c60023;
  }
- .address-item:hover{
+ .address-item:hover,
+ .address-add:hover{
      background-color: #fafafa;
  }
  .address-item:hover .address-opera{
@@ -42,16 +44,16 @@
  .address-item .address-opera .link{
      margin-right: 5px;
  }
- .address-item .address-new{
+ .address-add .address-new{
      padding: 8px 0;
      text-align: center;
      color: #ccc;
  }
- .address-item .address-new .fa{
+ .address-add .address-new .fa{
     font-size: 50px;
     line-height: 50px;
  }
- .address-item .address-new .text{
+ .address-add .address-new .text{
     font-size: 12 px;
  }
  /* 商品清单部分 */
