@@ -1,0 +1,32 @@
+div class="panel-body address-con">
+    <div class="address-item">
+        <div class="address-title">
+            北京 北京 xxxxxxxx
+        </div>
+        <div class="address-detail">
+            xxxxxxxxxxxx xxxxxxxx
+        </div> 
+        <div class="address-opera">
+            <span class="link address-update">编辑</span>
+            <span class="link address-delete">删除</span> 
+        </div>
+    </div>
+    <div class="address-item">
+        <div class="address-title">
+            北京 北京 xxxxxxxx
+        </div>
+        <div class="address-detail">
+            xxxxxxxxxxxx xxxxxxxx
+        </div> 
+        <div class="address-opera">
+            <span class="link address-update">编辑</span>
+            <span class="link address-delete">删除</span> 
+        </div>
+    </div>
+    <div class="address-item address-add">
+        <div class="address-new">
+            <i class="fa fa-plus"></i>
+            <div class="text">使用新地址</div> 
+        </div>
+    </div>
+</div>

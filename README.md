@@ -137,7 +137,8 @@ entry: {'detail': ['./src/page/detail/index.js']}
 9.支付页面功能点
 - 请求支付，获取支付二维码
 - 轮询检查订单状态，支付成功跳转提示页
--     
+10.使用charles做代理暂时解决跨域的问题时，配置错了地址，在跨域的url上右键选择Map Remote修改地址，怎么修改也修改不过来，请求的还是错误的地址，试了半天才找到解决办法：点击charles顶部工具栏倒数第二个有扳手的按钮，取消掉Map Remote再次重新配置对应url的Map Remote就可以修改地址了
+   
 vscode使用过程中安装的插件：
 - Alignment
     - 作用： 代码对齐
@@ -146,7 +147,6 @@ vscode使用过程中安装的插件：
     - 显示文件最近的commit和作者，显示当前行commit信息
 - highlight-matching-tag
     - 作用：html标签配对
-
 ## 说明
 如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
 

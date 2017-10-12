@@ -2,15 +2,15 @@
  * @Author: FangFeiyue 
  * @Date: 2017-10-12 11:20:09 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-10-12 11:21:04
+ * @Last Modified time: 2017-10-12 17:22:07
  */
 var tool = require('util/tool.js');
  
 var _order = {
-    // 获取购物车数量
-    getCartCount : function(resolve, reject){
+    // 获取订单列表
+    getProductList : function(resolve, reject){
         tool.request({
-            url     : tool.getServerUrl('/cart/get_cart_product_count.do'),
+            url     : tool.getServerUrl('/order/get_order_cart_product.do'),
             success : resolve,
             error   : reject
         });
