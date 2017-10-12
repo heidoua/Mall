@@ -2,7 +2,7 @@
  * @Author: FangFeiyue 
  * @Date: 2017-08-10 17:39:51 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-09-22 15:17:40
+ * @Last Modified time: 2017-10-12 11:12:00
  */
 /*对脚本的处理
 1.js用什么loader加载
@@ -44,9 +44,10 @@ var config = {
         'list'              : ['./src/page/list/index.js'],
         'detail'            : ['./src/page/detail/index.js'],
         'cart'              : ['./src/page/cart/index.js'],
+        'order-confirm'     : ['./src/page/order-confirm/index.js'],
         'common'            : ['./src/page/common/index.js'],
         'result'            : ['./src/page/result/index.js'],
-        'payment'            : ['./src/page/payment/index.js'],
+        'payment'           : ['./src/page/payment/index.js'],
         'user-login'        : ['./src/page/user-login/index.js'],
         'user-center'       : ['./src/page/user-center/index.js'],
         'user-register'     : ['./src/page/user-register/index.js'],
@@ -98,6 +99,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表页')),
         new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情页')),
         new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车')),
+        new HtmlWebpackPlugin(getHtmlConfig('order-confirm', '订单确认页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
         new HtmlWebpackPlugin(getHtmlConfig('payment', '订单支付')),

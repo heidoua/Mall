@@ -2,7 +2,7 @@
  * @Author: FangFeiyue 
  * @Date: 2017-10-10 17:23:18 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-10-11 19:25:40
+ * @Last Modified time: 2017-10-12 11:12:41
  */
 require("./index.css");
 require("page/common/header/index.js");
@@ -182,8 +182,7 @@ var page = {
             console.log(_this.data.cartInfo);
             //  总价格大于零，进行提交
             if (_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0){
-                window.location.href = './payment.html?1497096434996';
-                // window.location.href = './confirm.html';
+                window.location.href = './order-confirm.html';
             }else{
                 tool.errorTips('请选择商品后再提交');
             }
