@@ -173,6 +173,6 @@ QQ：294925572
 ![XinShiJieDeHuHuan](http://note.youdao.com/yws/public/resource/c2361265179a03449f6d52397fd50033/xmlnote/100D55934BB446839482D3EA0CDC3E8D/17820)
 
 ## 赞赏
-觉得有帮助可以微信扫码支持下哦，一分也是爱
+觉得有帮助可以微信扫码支持下哦，赞赏金额不限，一分也是您对作者的大力支持
 
 ![微信打赏](http://note.youdao.com/yws/public/resource/c2361265179a03449f6d52397fd50033/xmlnote/D77744C8EC944CF6AA232272CBC5CF6D/17828)
