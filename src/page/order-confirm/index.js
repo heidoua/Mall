@@ -2,16 +2,18 @@
  * @Author: FangFeiyue 
  * @Date: 2017-10-12 11:18:42 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-10-12 18:47:35
+ * @Last Modified time: 2017-10-25 18:31:30
  */
 require("./index.css");
 require("page/common/nav/index.js");
 require("page/common/header/index.js");
-var tool            = require("util/tool.js");
-var templateProduct = require("./product-list.string");
-var templateAddress = require("./address-list.string");
-var _order          = require("service/order-service.js"); 
-var _address        = require("service/address-service.js"); 
+var tool            = require("util/tool.js"),
+    _order          = require("service/order-service.js"),
+    _address        = require("service/address-service.js"),
+    addressModal    = require('./address-modal.js'),
+    templateProduct = require("./product-list.string"),
+    templateAddress = require("./address-list.string");
+
 var page = {
     data: {
         selectedAddressId: null
@@ -31,6 +33,8 @@ var page = {
         this.selectAddress(this);
         // 订单提交
         this.submitOrder(this);
+        // 地址的添加
+        this.addressAdd(this);
     },
     // 加载地址列表 
     loadAddressList: function(){
@@ -73,6 +77,17 @@ var page = {
              }else{
                  tool.errorTips('请您选择地址后再提交订单');
              }
+        });
+    },
+    // 地址的添加
+    addressAdd: function(_this){
+        $(document).on('click', '.address-add', function(){
+            addressModal.show({
+                isUpdate: false,
+                onSuccess: function(){
+                    _this.loadAddressList();
+                }
+            });
         });
     }
 }
