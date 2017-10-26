@@ -35,6 +35,8 @@ var page = {
         this.submitOrder(this);
         // 地址的添加
         this.addressAdd(this);
+        // 编辑地址
+        this.addressEditor(this);
     },
     // 加载地址列表 
     loadAddressList: function(){
@@ -87,6 +89,24 @@ var page = {
                 onSuccess: function(){
                     _this.loadAddressList();
                 }
+            });
+        });
+    },
+    // 编辑地址
+    addressEditor: function(_this){
+        $(document).on('click', '.address-update', function(){
+            var shippingId = $(this).parents('.address-item').data('id');
+            
+            _address.getAddress(shippingId, function(res){
+                addressModal.show({
+                    isUpdate : true,
+                    data     : res,
+                    onSuccess: function(){
+                        _this.loadAddressList();
+                    }
+                });
+            }, function(errMsg){
+                tool.errorTips();
             });
         });
     }

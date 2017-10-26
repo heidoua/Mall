@@ -1,5 +1,5 @@
 {{#list}}
-<div class="address-item">
+<div class="address-item" data-id="{{id}}>
     <div class="address-title">
         {{receiverProvince}} {{receiverCity}} ( {{receiverName}} 收 )
     </div>

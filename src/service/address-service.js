@@ -12,7 +12,8 @@ var _address = {
        tool.request({ 
            url     : tool.getServerUrl('/shipping/list.do'),
            data    : {
-               pageSize: 50
+               page
+               Size: 50
            },
            success : resolve,
            error   : reject
@@ -26,6 +27,18 @@ var _address = {
             success: resolve,
             error  : reject
         });       
+   },
+    // 获取单条收件地址   
+   getAddress: function(shippingId, resolve, reject){
+       alert(shippingId);
+        tool.request({
+            url: tool.getServerUrl('/shipping/select.do'),
+            data: {
+                shippingId: shippingId
+            },
+            success: resolve,
+            error: reject
+        });     
    }
 };
 
