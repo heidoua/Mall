@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>图片预加载之无序加载</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>        
+    </head>
+    <body>
+        <div class="container">
+            <img src="http://image5.tuku.cn/wallpaper/Landscape%20Wallpapers/8294_2560x1600.jpg" alt="pic" id="img">
+            <p>
+                <a  href="javascript:" class="btn" data-control="prev">上一页</a>
+                <a  href="javascript:" class="btn" data-control="next">下一页</a>
+            </p>
+        </div>
+        <div class="loading">
+            <p class="progress">0%</p>
+        </div>
+        <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+        <script src="./js/preload.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

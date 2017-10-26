@@ -30,6 +30,12 @@ var addressModal = {
 
             _this.loadCities(selectedProvince);
         });
+
+        // 提交收货地址
+        this.$modalWrap.find('.address-btn').click(function(){
+            var receiverInfo = _this.getReceiverInfo(),
+                isUpdate     = _this.option.isUpdate; 
+        });
     },
     // 渲染页面
     loadModal: function(){
@@ -63,6 +69,12 @@ var addressModal = {
         } 
 
         return html;
+    },
+    // 获取收件人信息，并做表单的验证
+    getReceiverInfo: function(){
+        var receiverInfo = {},
+            result = {status: false};
+        receiverInfo.receiverName
     },
     hide: function(){
         
