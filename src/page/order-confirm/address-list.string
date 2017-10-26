@@ -1,7 +1,7 @@
 {{#list}}
 <div class="address-item">
     <div class="address-title">
-        {{receiverProvince}} {{receiverCity}} ({ {receiverName}} 收 )
+        {{receiverProvince}} {{receiverCity}} ( {{receiverName}} 收 )
     </div>
     <div class="address-detail">
         {{receiverAddress}} {{receiverPhone}}

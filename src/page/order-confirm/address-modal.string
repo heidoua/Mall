@@ -1,4 +1,4 @@
-<div class="modal">
+<div class="modal close">
     <div class="modal-container">
         <div class="modal-header">
             <h1 class="modal-title">使用新地址</h1>
