@@ -13,15 +13,24 @@ var addressModal = {
     show: function(option){
         // option的绑定
         this.option = option;
+
         this.$modalWrap = $('.modal-wrap');
+        
         // 渲染页面
         this.loadModal();
         // 绑定事件 
         this.bindEvent(); 
     },
     bindEvent: function(){
+        var _this = this;
+        // select change事件
+        this.$modalWrap.find('#receiver-province').change(function(){
+            var selectedProvince = $(this).val();
 
+            _this.loadCities(selectedProvince);
+        });
     },
+    // 渲染页面
     loadModal: function(){
         var addressModalHtml = tool.renderHtml(templateAddressModal, this.option.data);
         this.$modalWrap.html(addressModalHtml);
