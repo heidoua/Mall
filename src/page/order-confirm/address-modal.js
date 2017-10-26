@@ -24,6 +24,7 @@ var addressModal = {
     bindEvent: function(){
         var _this = this;
         // select change事件
+        // 省市二级联动
         this.$modalWrap.find('#receiver-province').change(function(){
             var selectedProvince = $(this).val();
 
