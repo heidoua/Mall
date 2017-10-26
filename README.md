@@ -1,7 +1,7 @@
 # 电商平台项目(PC端)
 ## 下载源码
 ```
-https://github.com/fangfeiyue/Mall.git
+git clone https://github.com/fangfeiyue/Mall.git
 ```
 ## 运行项目
 ```
