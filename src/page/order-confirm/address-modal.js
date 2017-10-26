@@ -32,14 +32,17 @@ var addressModal = {
     },
     // 加载省份信息
     loadProvinces: function(){
-        var provinces = _cities.getProvinces() || [];
-        $provinceSelect = this.$modalWrap.find('#receiver-province');
-        console.log(this.getSelectOption(provinces));
+        var provinces       = _cities.getProvinces() || [],
+            $provinceSelect = this.$modalWrap.find('#receiver-province');
+
         $provinceSelect.html(this.getSelectOption(provinces));
     },
     // 加载城市信息
-    loadCities: function(){
-
+    loadCities: function(provinceName){
+        var cities = _cities.getCities(provinceName),
+            $citySelect = this.$modalWrap.find('#receiver-city');
+        
+        $citySelect.html(this.getSelectOption(cities));
     },
     // 获取select框的选项
     getSelectOption: function(optionArray){
