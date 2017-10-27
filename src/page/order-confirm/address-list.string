@@ -6,7 +6,7 @@
 <div class="address-item" data-id="{{id}}">
 {{/isActive}}
     <div class="address-title">
-        {{receiverCity}} {{receiverProvince}} （ {{receiverName}} 收 ）
+        {{receiverProvince}} {{receiverCity}}（ {{receiverName}} 收 ）
     </div>
     <div class="address-detail">
         {{receiverAddress}} {{receiverPhone}}

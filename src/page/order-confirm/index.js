@@ -37,6 +37,23 @@ var page = {
         this.addressAdd(this);
         // 编辑地址
         this.addressEditor(this);
+        // 删除收货人地址
+        this.addressDel(this);
+    },
+    // 删除收货人地址
+    addressDel: function(_this){
+        $(document).on('click', '.address-delete', function(){
+            var id = $(this).parents('.address-item').data('id');
+            if (window.confirm('确认要删除改地址吗？')){
+                _address.deleteAddress(id, function(res){
+                    console.log(res);
+                    tool.successTips(res);
+                    _this.loadAddressList();
+                },function(errMsg){
+                    tool.errorTips(errMsg);
+                });
+            }
+        });
     },
     // 加载地址列表 
     loadAddressList: function(){

@@ -39,14 +39,21 @@ var _address = {
     // 获取单条收件地址   
    getAddress: function(shippingId, resolve, reject){
         tool.request({
-            url: tool.getServerUrl('/shipping/select.do'),
-            data: {
-                shippingId: shippingId
-            },
+            url    : tool.getServerUrl('/shipping/select.do'),
+            data   : {shippingId: shippingId},
             success: resolve,
-            error: reject
+            error  : reject
         });     
-   }
+   },
+    // 删除选中的单个收货人地址
+    deleteAddress: function(shippingId, resolve, reject){
+        tool.request({
+            url    : tool.getServerUrl('/shipping/del.do'),
+            data   : {shippingId: shippingId},
+            success: resolve,
+            error  : reject
+        });
+    }    
 };
 
 module.exports  = _address;
