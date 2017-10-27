@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "WEBPACK_EVN=dev webpack-dev-server --inline --port 8088",
+    "dev": "WEBPACK_EVN=dev webpack-dev-server --inline --port 4000",
     "dev_windows": "set WEBPACK_EVN=dev && webpack-dev-server --inline --port 8088",
     "dist": "WEBPACK_EVN=online webpack -p",
     "dist_windows": "set WEBPACK_EVN=online && webpack -p",

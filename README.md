@@ -139,7 +139,14 @@ entry: {'detail': ['./src/page/detail/index.js']}
 - 轮询检查订单状态，支付成功跳转提示页
 
 10.使用charles做代理暂时解决跨域的问题时，配置错了地址，在跨域的url上右键选择Map Remote修改地址，怎么修改也修改不过来，请求的还是错误的地址，试了半天才找到解决办法：点击charles顶部工具栏倒数第二个有扳手的按钮，取消掉Map Remote再次重新配置对应url的Map Remote就可以修改地址了
-11.jQuery.extend 函数使用详解
+
+11.在终端运行npm run dev报以下错误
+```
+Error: getaddrinfo ENOTFOUND localhost at errnoException (dns.js:28:10) at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)
+```
+在网上找的解决办法一般都说是hosts文件没有配置127.0.0.1 localhost。可我打开看了，是配置了的，把项目发给别人，别人能正常运行。各种百度谷歌也没找到解决办法，仔细分析来分析去，上午的时候还能正常运行，下午也没改什么代码，并且别人的电脑能正常运行项目，这说明代码没问题，唯一变化的就是网络了，上午用的是无线，下午换了有线，难道是这个原因吗？把网络切换到无线，再次运行npm run dev果然运行成功了。好坑~~~
+
+12.jQuery.extend 函数使用详解
 ### Jquery的扩展方法原型是:
 ```
 extend(dest,src1,src2,src3...);
