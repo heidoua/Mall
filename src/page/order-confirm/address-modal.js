@@ -38,7 +38,6 @@ var addressModal = {
             // 使用新地址且验证通过
             if (!isUpdate && receiverInfo.status){
                 _address.save(receiverInfo.data, function(res){
-                    debugger
                     tool.successTips('地址添加成功'); 
                     _this.hide();
                     typeof _this.option.onSuccess  === 'function' && _this.option.onSuccess(res);
