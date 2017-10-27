@@ -12,8 +12,7 @@ var _address = {
        tool.request({ 
            url     : tool.getServerUrl('/shipping/list.do'),
            data    : {
-               page
-               Size: 50
+               pageSize: 50
            },
            success : resolve,
            error   : reject
