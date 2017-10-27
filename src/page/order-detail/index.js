@@ -2,7 +2,7 @@
  * @Author: FangFeiyue 
  * @Date: 2017-10-27 18:06:13 
  * @Last Modified by: FangFeiyue
- * @Last Modified time: 2017-10-27 18:13:51
+ * @Last Modified time: 2017-10-27 19:03:31
  */
 require('./index.css');
 require('page/common/nav/index.js');
@@ -43,7 +43,7 @@ var page = {
         _order.getOrderDetail(this.data.orderNumber, function(res){
             // 渲染html
             orderDetailHtml = tool.renderHtml(templateIndex, res);
-            $content.html(orderListHtml);
+            $content.html(orderDetailHtml);
         }, function(errMsg){
             $content.html('<p class="err-tip">' + errMsg + '</p>');
         });
