@@ -46,7 +46,12 @@ var addressModal = {
                     tool.errorTips(errMsg);    
                 });
             }else if (isUpdate && receiverInfo.status){// 更新收件人地址且验证通过
-
+                 _address.update(receiverInfo.data, function(res){
+                    tool.successTips('地址修改成功');
+                    _this.hide();
+                 },function(errMsg){
+                    tool.errorTips(errMsg);
+                });
             }else{ // 验证不通过
                 tool.errorTips(receiverInfo.errMsg || '好像哪里不对了~~~');
             }

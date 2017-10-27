@@ -27,6 +27,15 @@ var _address = {
             error  : reject
         });       
    },
+    // 更新收件人信息   
+   update: function(addressInfo, reslove, reject){
+        tool.request({
+            url: too.getServerUrl('/shipping/update.do'),
+            data: addressInfo,
+            success: reslove,
+            error: reject
+        });
+   },
     // 获取单条收件地址   
    getAddress: function(shippingId, resolve, reject){
        alert(shippingId);
