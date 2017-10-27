@@ -49,6 +49,7 @@ var addressModal = {
                  _address.update(receiverInfo.data, function(res){
                     tool.successTips('地址修改成功');
                     _this.hide();
+                    typeof _this.option.onSuccess  === 'function' && _this.option.onSuccess(res);
                  },function(errMsg){
                     tool.errorTips(errMsg);
                 });
@@ -126,7 +127,11 @@ var addressModal = {
         receiverInfo.receiverPhone    = $.trim(this.$modalWrap.find('#receiver-phone').val());
         receiverInfo.receiverAddress  = $.trim(this.$modalWrap.find('#receiver-address').val());
         receiverInfo.receiverZip      = $.trim(this.$modalWrap.find('#receiver-zip').val());
-
+        
+        if (this.option.isUpdate){
+             receiverInfo.id = this.$modalWrap.find('#receiver-id').val();
+        } 
+        
         if (!receiverInfo.receiverName){
             result.errMsg = '请输入收件人姓名'; 
         }else if (!receiverInfo.receiverProvince){
