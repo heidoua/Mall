@@ -12,8 +12,9 @@ var tool                 = require("util/tool.js"),
 var addressModal = {
     show: function(option){
         // option的绑定
-        this.option = option;
-        this.$modalWrap = $('.modal-wrap');
+        this.option      = option;
+        this.option.data = option.data || { };
+        this.$modalWrap  = $('.modal-wrap');
         
         // 渲染页面
         this.loadModal();
@@ -62,12 +63,15 @@ var addressModal = {
     },
     // 渲染页面
     loadModal: function(){
-        var addressModalHtml = tool.renderHtml(templateAddressModal, this.option.data);
+        var addressModalHtml = tool.renderHtml(templateAddressModal, {
+            isUpdate: this.option.isUpdate,
+            data: this.option.data
+        });
         this.$modalWrap.html(addressModalHtml);
         // 加载省份
         this.loadProvinces();
         // 加载城市
-        this.loadCities();
+        // this.loadCities();
     },
     // 加载省份信息
     loadProvinces: function(){
@@ -75,6 +79,12 @@ var addressModal = {
             $provinceSelect = this.$modalWrap.find('#receiver-province');
 
         $provinceSelect.html(this.getSelectOption(provinces));
+
+        // 如果是更新地址，并且有省份信息，做省份的回填
+        if (this.option.isUpdate && this.option.data.receiverProvince){
+            $provinceSelect.val(this.option.data.receiverProvince);
+            this.loadCities(this.option.data.receiverProvince);
+        } 
     },
     // 加载城市信息
     loadCities: function(provinceName){
@@ -82,6 +92,11 @@ var addressModal = {
             $citySelect = this.$modalWrap.find('#receiver-city');
         
         $citySelect.html(this.getSelectOption(cities));
+
+        // 如果是更新地址并且有城市信息，做城市的回填
+        if (this.option.isUpdate && this.option.data.receiverCity){
+            $citySelect.val(this.option.data.receiverCity);
+        }
     },
     // 获取select框的选项
     getSelectOption: function(optionArray){
