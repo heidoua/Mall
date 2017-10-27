@@ -10,7 +10,7 @@
             <i class="fa fa-close close"></i>
         </div>
         <div class="modal-body">
-            <div clas s="form">
+            <div class="form">
                 <div class="form-line">
                     <label for="receiver-name" class="label"><span class="require">*</span>收件人姓名：</label>
                     <input type="text" class="form-item" id="receiver-name" placeholder="请输入收件人姓名" value="{{data.receiverName}}">
