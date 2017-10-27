@@ -18,8 +18,10 @@
                 <div class="form-line">
                     <label for="receiver-province" class="label"><span class="require">*</span>所在城市：</label>
                     <select name="" id="receiver-province" class="form-item">
+                        <option value="">请选择</option>
                     </select>
                     <select name="" id="receiver-city" class="form-item">
+                        <option value="">请选择</option>
                     </select>
                 </div>
                 <div class="form-line">
