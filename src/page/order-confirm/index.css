@@ -166,7 +166,7 @@
     margin-right: 10px;
     cursor: pointer;
 }
-.form .form-line .label .required{
+.form .form-line .label .require{
     color: red;
 }
 .form .form-line .form-item{
