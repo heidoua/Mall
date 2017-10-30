@@ -58,12 +58,14 @@ var page = {
     // 取消订单
    cancelOrder: function(_this){
         $(document).on('click', '.order-cancel', function(){
-            _order.cancelOrder(_this.data.orderNumber, function(res){
-                too.successTips('该订单取消成功!');
-                _this.loadDetail();
-            }, function(errMsg){
-                tool.errorTips(errMsg);
-            });
+            if (window.confirm('确实要取消该订单吗?')){
+                _order.cancelOrder(_this.data.orderNumber, function(res){
+                    too.successTips('该订单取消成功!');
+                    _this.loadDetail();
+                }, function(errMsg){
+                    tool.errorTips(errMsg);
+                });
+            }
         });
    }
 }; 
