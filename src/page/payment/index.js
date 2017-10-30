@@ -22,7 +22,6 @@ var page = {
         this.loadPaymentInfo();
     },
     loadPaymentInfo: function(){
-        console.log('zhifubao');
         var _this = this,
             paymentHtml = '',
             $pageWrap = $('.page-wrap');
