@@ -17,7 +17,18 @@ var _payment = {
             success : resolve,
             error   : reject
         });
-    } 
+    },
+    // 查询订单状态
+    getPaymentStatus: function(orderNumber, resolve, reject){
+        tool.request({
+            url     : tool.getServerUrl('/order/query_order_pay_status.do'),
+            data    : {
+                orderNo: orderNumber
+            },
+            success : resolve,
+            error   : reject
+        });
+    }
 };
 
 module.exports  = _payment;

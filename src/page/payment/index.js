@@ -30,9 +30,24 @@ var page = {
         _payment.getPaymentInfo(this.data.orderNumber, function(res){
             paymentHtml = tool.renderHtml(templateIndex, res);
             $pageWrap.html(paymentHtml);
+            // 监听订单状态
+            _this.listenOrderStatus();
         }, function(errMsg){
             $pageWrap.html('<p class="err-tip">' + errMsg + '</p>');
         });
+    },
+    // 监听订单状态
+    listenOrderStatus: function(){
+        var _this = this;
+        this.paymentTime = window.setInterval(function(){
+            _payment.getPaymentStatus(_this.orderNumber, function(res){
+                if (res == true){
+                    window.location.href = './result.html?type=payment&orderNumber=' + _this.data.orderNumber;
+                }
+            }, function(errMsg){
+
+            });
+        }, 5e3);
     }
 };
 
