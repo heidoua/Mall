@@ -18,6 +18,8 @@ npm run dev
 - 框架选择：jQuery + css + [Hogan](http://www.qdfuns.com/notes/31986/c84f112cf773005a31caacc3736da971.html)
 - 模块化方案：CommonJS + Webpack
 - 前后端分离方式：完全分离，纯静态方式
+### 基本演示
+![基本功能演示](https://github.com/fangfeiyue/Mall/blob/master/net.gif)
 
 ### 几大模块简介：
 - 用户模块
