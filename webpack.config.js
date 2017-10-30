@@ -34,7 +34,7 @@ var getHtmlConfig     = function(name, title){
         inject  : true,//true默认值，script标签位于html文件的;  body 底部。body同true;   head script 标签位于 head 标签内; false 不插入生成的 js 文件，只是单纯的生成一个 html 文件
         hash    : true,
         // 添加favicon
-        favicon: './favicon.ico ',
+        favicon: './favicon.ico',
         chunks  : ['common', name]
      };
 }
@@ -60,8 +60,8 @@ var config = {
         'user-center-update': ['./src/page/user-center-update/index.js'],
     },
     output: {
-        path      : './dist',//存放文件的一个路径
-        publicPath: '/dist',//访问文件时的一个路径
+        path      : __dirname + '/dist/',//存放文件的一个路径
+        publicPath: "dev" === WEBPACK_EVN ? '/dist/':'//s.happymall.com/mmall-fe/dist/',//访问文件时的一个路径
         filename  : 'js/[name].js'
     },
     externals     : {//可以把外部的变量或者模块加载进来
@@ -76,7 +76,13 @@ var config = {
                 loader: 'url-loader?limit = 100&name = resource/[name].[ext]'
             },{
                 test  : /\.string$/,
-                loader: 'html-loader'
+                loader: 'html-loader',
+                query: {
+                    // 最小化压缩
+                    minimize: true,
+                    // 要不要删除属性上的引号
+                    removeAttributeQuotes: false 
+                }
             }
         ]
     },

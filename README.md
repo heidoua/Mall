@@ -236,11 +236,37 @@ var result=$.extend( false, {},
 result={name:"John",last:"Resig",location:{state:"MA",county:"China"}}
 ```
 以上就是$.extend()在项目中经常会使用到的一些细节。
-### 生产环境的适配
-- 添加favicon
-- 线上域名的分离，HTML路径的简化
-- 添加dns-prefetch
-- 对线上打包结果做回归测试
+### 生产环境的适配遇到的问题
+- 生产环境适配需要配置的东西
+    - 添加favicon
+    - 线上域名的分离，HTML路径的简化
+    - 添加dns-prefetch
+    - 对线上打包结果做回归测试
+
+1.webpack打包后，访问index.html页面，图片无法正确加载,原因是webpack配置文件中ouput的dist没有加斜杠，如下
+```
+output: {
+    path      : './dist',//存放文件的一个路径
+    publicPath: '/dist',//访问文件时的一个路径
+    filename  : 'js/[name].js'
+},
+```
+js和css资源前面会自动补全斜杠，而图片资源不会自动补全，导致图片的路径为distresource/img找不到正确的路径，图片正确的路径应该为dist/resource/img，解决办法dist后面加上斜杠
+```
+output: {
+    path      : './dist/',//存放文件的一个路径
+    publicPath: '/dist/',//访问文件时的一个路径
+    filename  : 'js/[name].js'
+},
+```
+还有一点需要注意的是webpack1.x中支持相对路径，但webpack1.x以上不支持相对路径了，所以要改成绝对路径，最终的配置为
+```
+output: {
+    path      : __dirname + './dist',//存放文件的一个路径
+    publicPath: __dirname + '/dist',//访问文件时的一个路径
+    filename  : 'js/[name].js'
+},
+```
 
 
 ## 传说中的彩蛋
