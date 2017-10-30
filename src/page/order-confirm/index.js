@@ -93,7 +93,8 @@ var page = {
         $(document).on('click', '.order-submit', function(){
              var shippingId = _this.data.selectedAddressId;
              if (shippingId){
-                _order.createOrder(shippingId, function(res){
+                _order.createOrder({shippingId: shippingId}, function(res){
+                    // return;
                     window.location.href = './payment.html?orderNumber=' + res.orderNo;
                 }, function(errMsg){
                     tool.errorTips(errMsg);
