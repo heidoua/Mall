@@ -4,6 +4,23 @@
  * @Last Modified by: FangFeiyue
  * @Last Modified time: 2017-10-27 19:50:59
  */
+ /* 订单信息 */
+ .order-info .text-line{
+     height: 30px;
+     line-height: 30px;
+ }
+ .order-info .text-line .text{
+     margin-right: 30px;
+ }
+ .order-info .btn{
+     width: 40px;
+     height: 30px;
+     line-height: 30px;
+     font-size: 12px;
+     margin-right: 10px;
+     text-align: center;
+ }
+ /* 商品清单 */
  .product-table{
      width: 100%;
      border-collapse: collapse;
@@ -44,6 +61,7 @@
 }
 /* 总价钱 */
 .total{
+    text-align: right;
     font-size: 14px;
     height: 40px;
     line-height: 40px;
@@ -53,5 +71,4 @@
 .total .total-price{
     font-weight: bold;
     color: #c60023;
-    
 }

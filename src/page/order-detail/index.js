@@ -41,12 +41,19 @@ var page = {
             
         $content.html('<div class="loading"></div>');
         _order.getOrderDetail(this.data.orderNumber, function(res){
+            _this.dataFilter(res);
             // 渲染html
             orderDetailHtml = tool.renderHtml(templateIndex, res);
             $content.html(orderDetailHtml);
         }, function(errMsg){
             $content.html('<p class="err-tip">' + errMsg + '</p>');
         });
+   },
+   // 数据的适配
+   dataFilter: function(data){
+        // 10表示提交了订单并且在支付以前 
+        data.needPay      = data.status === 10;
+        data.isCancelable = data.status === 10;
    }
 }; 
 
