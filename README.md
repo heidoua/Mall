@@ -236,6 +236,12 @@ var result=$.extend( false, {},
 result={name:"John",last:"Resig",location:{state:"MA",county:"China"}}
 ```
 以上就是$.extend()在项目中经常会使用到的一些细节。
+### 生产环境的适配
+- 添加favicon
+- 线上域名的分离，HTML路径的简化
+- 添加dns-prefetch
+- 对线上打包结果做回归测试
+
 
 ## 传说中的彩蛋
 
