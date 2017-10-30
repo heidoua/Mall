@@ -27,7 +27,8 @@ var page = {
        this.bindEvent();     
    }, 
    bindEvent: function(){
-       
+       // 取消订单
+       this.cancelOrder(this);
    },
    onLoad: function(){
        this.loadDetail();
