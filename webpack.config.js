@@ -33,6 +33,8 @@ var getHtmlConfig     = function(name, title){
         template: './src/view/' + name + '.html',
         inject  : true,//true默认值，script标签位于html文件的;  body 底部。body同true;   head script 标签位于 head 标签内; false 不插入生成的 js 文件，只是单纯的生成一个 html 文件
         hash    : true,
+        // 添加favicon
+        favicon: './favicon.ico ',
         chunks  : ['common', name]
      };
 }
