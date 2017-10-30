@@ -54,6 +54,17 @@ var page = {
         // 10表示提交了订单并且在支付以前 
         data.needPay      = data.status === 10;
         data.isCancelable = data.status === 10;
+   },
+    // 取消订单
+   cancelOrder: function(_this){
+        $(document).on('click', '.order-cancel', function(){
+            _order.cancelOrder(_this.data.orderNumber, function(res){
+                too.successTips('该订单取消成功!');
+                _this.loadDetail();
+            }, function(errMsg){
+                tool.errorTips(errMsg);
+            });
+        });
    }
 }; 
 

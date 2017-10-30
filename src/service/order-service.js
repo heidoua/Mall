@@ -42,6 +42,15 @@ var _order = {
             success: resolve,
             error  : reject
         });
+    },
+    // 取消订单
+    cancelOrder: function(orderNumber, resolve, reject){
+        tool.request({
+            url    : tool.getServerUrl(),
+            data   : {orderNo: orderNumber},
+            success: resolve,
+            error  : reject
+        });
     }
 };
 
