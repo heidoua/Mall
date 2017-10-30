@@ -268,6 +268,23 @@ output: {
 },
 ```
 
+2. 问题：webpack -p压缩完代码，测试的过程中，填写收货地址的弹出，莫名奇妙每个选项赋值'/'
+
+原因：webpack打包的时候把html属性中的双引号自动去掉了
+
+解决办法： 在webpack配置文件中html-loader中添加query，具体内容如下
+```
+{
+test  : /\.string$/,
+loader: 'html-loader',
+query: {
+    // 最小化压缩
+    minimize: true,
+    // 要不要删除属性上的引号
+    removeAttributeQuotes: false 
+}
+}
+```
 
 ## 传说中的彩蛋
 
