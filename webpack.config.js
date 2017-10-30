@@ -45,6 +45,7 @@ var config = {
         'cart'              : ['./src/page/cart/index.js'],
         'list'              : ['./src/page/list/index.js'],
         'index'             : ['./src/page/index/index.js'],
+        'about'             : ['./src/page/about/index.js'],
         'detail'            : ['./src/page/detail/index.js'],
         'common'            : ['./src/page/common/index.js'],
         'result'            : ['./src/page/result/index.js'],
@@ -107,6 +108,7 @@ var config = {
         //html模板的处理
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
         new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车')),
+        new HtmlWebpackPlugin(getHtmlConfig('about', '关于Mall')),
         new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表页')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
         new HtmlWebpackPlugin(getHtmlConfig('payment', '订单支付')),

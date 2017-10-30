@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require('html-loader!./layout/head-common.html') %>
+    <title><%=htmlWebpackPlugin.options.title%>-Mall</title>
+</head> 
+<body>
+    <%= require('html-loader!./layout/nav.html') %>
+    <%= require('html-loader!./layout/header.html') %>
+    <div class="crumb">
+        <div class="w">
+            <div class="crumb-con">
+                <a href="./index.html" class="link">Mall</a>
+                <span>></span>
+                <span class="link-text"><%=htmlWebpackPlugin.options.title%></span>
+            </div>
+        </div>
+    </div> 
+    <div class="page-wrap w">
+        <div class="pannel">
+             <h1 class="pannel-title">关于我们</h1>
+             <div class="pannel-body">
+                欢饮访问科瑞科技，这是一个测试网站
+             </div>
+        </div>
+    </div>
+    <%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>
