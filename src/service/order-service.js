@@ -46,7 +46,7 @@ var _order = {
     // 取消订单
     cancelOrder: function(orderNumber, resolve, reject){
         tool.request({
-            url    : tool.getServerUrl(),
+            url    : tool.getServerUrl('/order/cancel.do'),
             data   : {orderNo: orderNumber},
             success: resolve,
             error  : reject

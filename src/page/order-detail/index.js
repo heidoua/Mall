@@ -61,7 +61,7 @@ var page = {
         $(document).on('click', '.order-cancel', function(){
             if (window.confirm('确实要取消该订单吗?')){
                 _order.cancelOrder(_this.data.orderNumber, function(res){
-                    too.successTips('该订单取消成功!');
+                    tool.successTips('该订单取消成功!');
                     _this.loadDetail();
                 }, function(errMsg){
                     tool.errorTips(errMsg);
